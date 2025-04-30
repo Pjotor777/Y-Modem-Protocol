@@ -1,12 +1,12 @@
 //============================================================================
 //
-//% Student Name 1: Petar Tesanovic
-//% Student 1 #: 301434515
-//% Student 1 userid (email): pta44 (pta44@sfu.ca)
+//% Student Name 1: 
+//% Student 1 #: 
+//% Student 1 userid (email): 
 //
-//% Student Name 2: Aaron Lopez-Dee
-//% Student 2 #: 301434253
-//% Student 2 userid (email): ala233 (ala233@sfu.ca)
+//% Student Name 2: 
+//% Student 2 #: 
+//% Student 2 userid (email): 
 //
 //% Below, edit to list any people who helped you with the code in this file,
 //%      or put 'None' if nobody helped (the two of) you.
