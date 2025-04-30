@@ -70,6 +70,7 @@ Fault injection in the medium and error-handling in the sender/receiver logic.
 ## Credits
 Developed as part of ENSC 351 – Real-Time and Embedded Systems, Fall 2024.
 Instructor: Craig Scratchley
+
 Zedboard setup and documentation contributions: Eton Kan, Maryamsadat RasouliDanesh
 
 ## License
