@@ -68,6 +68,8 @@ YMODEM protocol structure, including block formats, handshakes, error checking (
 
 Fault injection in the medium and error-handling in the sender/receiver logic.
 
+Basic UART programming.
+
 ## Credits
 Developed as part of ENSC 351 – Real-Time and Embedded Systems, Fall 2024.
 Instructor: Craig Scratchley
