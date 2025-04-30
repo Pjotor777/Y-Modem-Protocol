@@ -158,15 +158,18 @@ static void uart_received(char data)
  * uart_send - sends data to HW
  * @data: data to send
  */
+static inline u32 tx_ready(void); /// func declaration to use in uart_send
 static void uart_send(char data)
-{
-	// ***** Finish me by adding stuff here! *****
+{ /// sends character thru the UART
+	while (tx_ready()) { /// when the transmitter is ready, send chars
+		/// send thru uart, using transmit holding register
+		iowrite32(data, uart->base_addr + UART_THR_OFFSET);
+	}
 }
 
 static inline u32 tx_ready(void)
-{
-	// ***** Finish me by adding and improving stuff here! *****
-	return 0;
+{ /// checks if the UART transmitter is ready to send data
+	return ioread32(uart->base_addr + UART_LSR_OFFSET) & UART_LSR_TX_BUFFER_EMPTY;
 }
 
 static inline u32 rx_ready(void)
@@ -174,15 +177,27 @@ static inline u32 rx_ready(void)
         return ioread32(uart->base_addr + UART_LSR_OFFSET) & UART_LSR_DATA_READY;
 }
 
-static void uart_tasklet_func(unsigned long d) {
+static void uart_tasklet_func(unsigned long d) {  /// tasklet = soft interrupt handler
+	///  handles the transmission of data from the output FIFO to the UART
+	/// runs when there is data in the out_fifo and the UART transmitter
+	/// is ready to send more data
         struct uart_data *uart = (void *)d;
+        char data;
 
-        // ***** Finish me by adding and improving stuff here! *****
-        tx_ready();
-        uart_send(uart->irq); //now sending silly data
+        /// check if the out_fifo (output queue) is not empty and if the transmitter is ready
+        while (!kfifo_is_empty(&uart->out_fifo) && tx_ready()) {
+        	/// checks whether a byte of data has been successfully dequeued from the out_fifo queue
+        	if (kfifo_out(&uart->out_fifo, &data, sizeof(data)) == sizeof(data)) {
+        		uart_send(data); /// has data, and ready, thus: send data
+        	}
 
-        printk(KERN_ALERT "end of %s\n", __func__);
-}
+        }
+        /// Caps out at 256 chars, thus:
+        /// wake up the waiting process for writing to write what is left
+        if(!kfifo_is_full(&uart->out_fifo)){ /// queue is full, i.e capped @ 256?
+        	wake_up_interruptible(&uart->writeable); /// readble caps out at 256 chars, use writeable
+        }
+} // end of uart_tasklet_func
 
 static int isr_counter;
 
