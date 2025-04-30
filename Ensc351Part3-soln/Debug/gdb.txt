@@ -1,0 +1,18 @@
+Processing .config/gdb/gdbinit 
+Reading symbols from ./Ensc351Part3-soln...
+Starting program: /mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351Part3-soln/Debug/Ensc351Part3-soln 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff36006c0 (LWP 2092252)]
+[New Thread 0x7ffff20006c0 (LWP 2092253)]
+[New Thread 0x7ffff0a006c0 (LWP 2092254)]
+
+Thread 4 "T41" received signal SIGPIPE, Broken pipe.
+[Switching to Thread 0x7ffff0a006c0 (LWP 2092254)]
+0x00007ffff691c5ad in __GI___libc_write (nbytes=6, buf=0x5555555db920, fd=5) at ../sysdeps/unix/sysv/linux/write.c:26
+warning: 26	../sysdeps/unix/sysv/linux/write.c: No such file or directory

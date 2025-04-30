@@ -1,0 +1,20 @@
+ReceiverY.o: ../ReceiverY.cpp ../ReceiverY.h ../PeerY.h \
+ /mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/ss_api.hxx ../crc.h \
+ ../Linemax.h ../myIO.h ../yReceiverSS.h \
+ /mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/VNPE.h \
+ /mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/VNPE_reenable.h \
+ /mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/AtomicCOUT.h \
+ /mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/ScopedMutex.h \
+ /mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/AtomicConsole.h
+../ReceiverY.h:
+../PeerY.h:
+/mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/ss_api.hxx:
+../crc.h:
+../Linemax.h:
+../myIO.h:
+../yReceiverSS.h:
+/mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/VNPE.h:
+/mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/VNPE_reenable.h:
+/mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/AtomicCOUT.h:
+/mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/ScopedMutex.h:
+/mnt/hgfs/VMsf/eclipse-workspace_24-06_1247/Ensc351/AtomicConsole.h:

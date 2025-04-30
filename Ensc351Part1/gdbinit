@@ -1,0 +1,16 @@
+# Craig Scratchley, September 2024
+# gdb initialization file for ENSC 351
+
+#set debug infrun 1
+set logging overwrite on
+#set logging on
+
+handle SIGPIPE nostop
+
+## Skip the Catch library functions  when stepping into
+#skip -rfu Catch
+#skip -rfu _catch_sr
+
+# Skip everything from the std namespace
+skip -rfu ^std::
+
