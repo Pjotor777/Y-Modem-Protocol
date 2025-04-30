@@ -13,7 +13,7 @@ Output is written to a file (ymodemSenderData.dat) instead of using a real seria
 Assumes perfect receiver behavior (always sends C, ACK, or NAK as expected).
 
 Key file: SenderY.cpp
----
+
 ## Part 2: Bidirectional Communication and the "Kind" Medium
 Introduces a simulated "kind medium" using POSIX socketpairs and multithreading.
 
@@ -22,24 +22,24 @@ A receiver (ReceiverY) is implemented to respond realistically to YMODEM blocks.
 Sender and receiver interact via a simulated medium which may complement or alter certain bytes.
 
 Core files: SenderY.cpp, ReceiverY.cpp, Medium.cpp, myIO.cpp
----
+
 ## Part 3: Glitch Handling and Simulated Drain
 Introduces glitch byte injection by the medium.
 
 Implements myTcdrain() and enhances myReadcond() to dump incoming glitches before the final byte of each block is sent.
 
 Adds robustness in the presence of unexpected ACKs or data corruption.
----
+
 ## Part 4: Designing a State Chart
 Was not part of the regular code, and was thus excluded
----
+
 ## Part 5: Real Serial Device Integration (Zedboard)
 Configures a Xilinx Zedboard for live communication over UART (via /dev/ttyS* devices).
 
 Uses TeraTerm/Minicom to verify hardware-level UART output and signal integrity.
 
 Integrates the kernel module uartAxi for bidirectional serial communication.
----
+
 ## Part 6: Full Protocol + "Evil" Medium
 Final integration of full YMODEM statechart logic.
 
@@ -54,7 +54,7 @@ Extra unsolicited ACKs.
 Implements command console and KVM thread to switch keyboard input between terminals and aggregate output.
 
 Adds support for &s, &r, and &c commands at runtime.
----
+
 ## Key Concepts and Features
 POSIX system programming (e.g., read(), write(), select(), socketpair()).
 
