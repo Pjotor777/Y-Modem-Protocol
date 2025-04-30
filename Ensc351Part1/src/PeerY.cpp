@@ -3,10 +3,16 @@
 //% Student Name 1: 
 //% Student 1 #: 
 //% Student 1 userid (email): 
+<<<<<<< HEAD
 //
 //% Student Name 2: 
 //% Student 2 #: 
 //% Student 2 userid (email): 
+=======
+//% Student Name 2: 
+//% Student 2 #: 
+//% Student 2 userid (email):
+>>>>>>> 0eebcdd (removed sensitive info)
 //
 //% Below, edit to list any people who helped you with the code in this file,
 //%      or put 'None' if nobody helped (the two of) you.
