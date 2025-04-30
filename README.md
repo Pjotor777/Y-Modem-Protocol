@@ -4,7 +4,7 @@ This repository contains a multipart implementation of the YMODEM Batch file tra
 
 Overview
 The project simulates the YMODEM protocol used for file transfer between two terminals over a potentially unreliable communication medium. It is split across several parts, each building upon the previous with added functionality and robustness:
----
+
 ## Part 1: Basic YMODEM Sender Simulation
 Simulated transmission of file blocks using 128-byte data blocks and CRC-16.
 
@@ -70,6 +70,6 @@ Fault injection in the medium and error-handling in the sender/receiver logic.
 Developed as part of ENSC 351 – Real-Time and Embedded Systems, Fall 2024.
 Instructor: Craig Scratchley
 Zedboard setup and documentation contributions: Eton Kan, Maryamsadat RasouliDanesh
----
+
 ## License
 This project is intended for academic use only. Unauthorized code sharing or copying is strictly prohibited as per SFU policy.
