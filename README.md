@@ -1,6 +1,6 @@
 # Y-Modem-Protocol
 ENSC 351 YMODEM Protocol Project
-This repository contains a multipart implementation of the YMODEM Batch file transfer protocol in C++, designed as part of the ENSC 351: Real-Time and Embedded Systems course at SFU. The project progresses through increasing levels of protocol complexity, medium behavior, and system realism.
+This repository contains a multipart implementation of the YMODEM Batch file transfer protocol in C++, designed as part of the ENSC 351: Real-Time and Embedded Systems course at SFU. The project progresses through increasing levels of protocol complexity, medium behavior, and system realism. In addition, part 5: uartAxi contains the kernel module source code responsible for enabling UART communication on the Diligent Zedboard, allowing serial data transmission between the virtual and host system via the PMOD interface.
 
 Overview
 The project simulates the YMODEM protocol used for file transfer between two terminals over a potentially unreliable communication medium. It is split across several parts, each building upon the previous with added functionality and robustness:
