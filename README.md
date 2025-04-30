@@ -31,7 +31,8 @@ Implements myTcdrain() and enhances myReadcond() to dump incoming glitches befor
 Adds robustness in the presence of unexpected ACKs or data corruption.
 
 ## Part 4: Designing a State Chart
-Was not part of the regular code, and was thus excluded
+Designed a receiver state chart that takes care of all possibilities that can arise with the YMODEM protocol
+Was a visual statechart, and thus excluded from the project as of now
 
 ## Part 5: Real Serial Device Integration (Zedboard)
 Configures a Xilinx Zedboard for live communication over UART (via /dev/ttyS* devices).
