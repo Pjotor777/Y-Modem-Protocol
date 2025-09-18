@@ -42,10 +42,10 @@ Uses TeraTerm/Minicom to verify hardware-level UART output and signal integrity.
 
 Integrates the kernel module uartAxi for bidirectional serial communication.
 
-## Part 6: Full Protocol + "Evil" Medium
-Final integration of full YMODEM statechart logic.
+Handles timeouts, when parts of a data stream are dropped
 
-Handles medium behavior that includes:
+## Part 6: Full Protocol + "Evil" Medium
+Device driver to handle interrupts from a UART hardware chip
 
 Complementing, dropping, and injecting bytes.
 
